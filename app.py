@@ -13,10 +13,10 @@ def framer_webhook():
         data = request.get_json(force=True)
 
         # Extract fields from Framer form
-        name = data.get("name", "N/A")
-        email = data.get("email", "N/A")
-        service = data.get("service", "N/A")
-        message = data.get("textArea", "N/A")
+        name = data.get("Name", "N/A")
+        username = data.get("Username", "N/A")
+        service = data.get("Service", "N/A")
+        message = data.get("Text Area", "N/A")
 
         # Check webhook URL
         if not DISCORD_WEBHOOK_URL:
@@ -27,7 +27,7 @@ def framer_webhook():
             "content": (
                 f"📩 **New Client Submission**\n"
                 f"👤 **Name:** {name}\n"
-                f"📧 **Email:** {email}\n"
+                f"📧 **DcUserName:** {username}\n"
                 f"🧰 **Service:** {service}\n"
                 f"📝 **Message:** {message}"
             )
