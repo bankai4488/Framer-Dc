@@ -16,7 +16,7 @@ def framer_webhook():
         name = data.get("Name", "N/A")
         username = data.get("Username", "N/A")
         service = data.get("Service", "N/A")
-        message = data.get("Text Area", "N/A")
+        message = data.get("Message", "N/A")
 
         # Check webhook URL
         if not DISCORD_WEBHOOK_URL:
